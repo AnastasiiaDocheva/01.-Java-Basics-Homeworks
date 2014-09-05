@@ -1,0 +1,5 @@
+1. Shift + Right click in the java code containing folder and press Open command window here
+2. path c:\Program Files\Java\jdk1.8.0_20\bin - creating path to bin
+3. cd d:\SoftUni\01. Java Basics\Java Basics Homeworks\1-Introduction-to-Java\src - opening folder with java code
+4. javac SumTwoNumbers.java - compilation from java to byte code
+5. java SumTwoNumbers - launching byte code

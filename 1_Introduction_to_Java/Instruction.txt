@@ -1,0 +1,26 @@
+JAR ARCHIVE
+
+1. В Еклипс – кликвате с десен бутон на мишката върху проекта и избирате Експорт;
+2. Избирате Java – Runnable JAR file;
+3. В Launch Configuration избирате съответния клас, който искате да се стартира. Посочвате папка и име на jar файла, който ще се създаде и маркирате – Export required libraries into generated JAR. След това натискате Finish и потвърждавате при следващите диалогови прозорци /ако ви излязат такива/:
+4. Тъй като Еклипс не експортва фонта, който използвам, се налага фонта да се добави ръчно в генерирания JAR файл с команда през терминала:
+jar uf cards.jar DejaVuSansMono.ttf  - create path to jdk, copy ttf to jar folder
+5. Манифест файла не съм коригирал, автоматично генерирания от Еклипс е със следните Class-Path и Main-Class:
+Manifest-Version: 1.0
+Class-Path: .
+Main-Class: GeneratePDFbyExternalLibrary
+6. Скриптовият файл е със следните команди:
+#!/bin/bash
+java -jar cards.jar
+7. Стартиране на скриптовият файл от терминала /сега видях, че не съм го именувал run.sh както е в условието/:
+sh cards.sh
+Скриптовият файл се създава така: правите си нов текстови файл (например в Notepad) и в него пишете командите, които колегата е дал, а именно: #!/bin/bash java -jar cards.jar (вместо cards.jar слагате името на вашия jar файл). Преименувате така създаденият .txt файл на run.sh, ако ще го пускате под Линукс или run.cmd за Уиндоус.
+
+JAR to EXE launch4j
+1. Install launch4j.
+2. Output file - xxxx/xxxxx/xxxx.exe file type exe
+   Jar - path
+
+Intellisense Window --> Java --> Editor --> Content Assist
+3. JRE - Min JRE version 1.0.0
+4. compile

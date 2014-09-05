@@ -1,0 +1,3 @@
+apple 1.2
+﻿milk 2.8
+coffee 8.5
